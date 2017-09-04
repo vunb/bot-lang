@@ -4,7 +4,9 @@ const re3 = new RegExp(/\s+/g);
 const re4 = new RegExp(/(’|‘)/g);
 const re5 = new RegExp(/(“|”)/g);
 const re6 = new RegExp(/(–|—)/g);
-const re7 = new RegExp(/[\u00A1-\u1EF3]/g);
+// const re7 = new RegExp(/[\u00A1-\u1EF3]/g);
+// support vietnamese unicode
+const re7 = new RegExp(/[^\x00-\x7F\u0080-\u00FF\u0100-\u024F\u1E00-\u1EFF\u0300-\u036F]/g);
 const re8 = new RegExp(/[+]{1}/g);
 const re9 = new RegExp(/<plus>/g);
 const re10 = new RegExp(/\d,\d/g);
