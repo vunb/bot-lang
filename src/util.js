@@ -121,7 +121,8 @@ const uniq = function uniq(a) {
   return a.sort().filter((item, pos, ary) => !pos || item !== ary[pos - 1]);
 };
 
-const CLEAN_REGEX = /[\w'-]+/i;
+// const CLEAN_REGEX = /[\w'-]+/i;
+const CLEAN_REGEX = /[0-9aáàạảãăắằặẳẵâấầậẩẫbcdđeéèẹẻẽêếềệểễfghiíìịỉĩjklmnoóòọỏõôồốộổỗơớờợởỡpqrstuúùụủũưứừựửữvwxyýỳỵỷỹzAÁÀẠẢÃĂẮẰẶẲẴÂẤẦẬẨẪBCDĐEÉÈẸẺẼÊẾỀỆỂỄFGHIÍÌỊỈĨJKLMNOÓÒỌỎÕÔỐỒỘỔỖƠỚỜỢỞỠPQRSTUÚÙỤỦŨƯỨỪỰỬỮVWXYÝỲỴỶỸZ_'-]+/i;
 
 const cleanWord = (word = '') => {
   const matches = word.match(CLEAN_REGEX);
